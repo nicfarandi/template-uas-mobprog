@@ -14,13 +14,6 @@ public class PostDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_detail);
-
-        String postText = getIntent().getStringExtra("post");
-        PostFragment postFragment = PostFragment.newInstance(postText);
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, postFragment)
-                .commit();
     }
 
 }
