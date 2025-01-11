@@ -14,6 +14,17 @@ public class PostDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_detail);
+
+        // Load the fragment
+        if (savedInstanceState == null) {
+            int postId = getIntent().getIntExtra("post_id", -1);
+            PostFragment fragment = PostFragment.newInstance(postId);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+        }
+
     }
 
 }
