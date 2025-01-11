@@ -28,14 +28,27 @@
       android:layout_above="@id/menubar"
       android:layout_below="@+id/textView"
       android:layout_marginTop="0dp"
-      android:layout_marginBottom="0dp">
+      android:layout_marginBottom="0dp"
+      android:gravity="center">
 
-    <ListView
-        android:id="@+id/listView"
+    <EditText
+        android:id="@+id/post_content_edit_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="Write your post here"
+        android:inputType="textMultiLine|textCapSentences"
+        android:lines="2"
+        android:maxLines="10" />
 
-    </ListView>
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_content_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:text="Submit Post" />
   </RelativeLayout>
 
   <TableLayout
